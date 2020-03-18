@@ -2,13 +2,30 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:PMS_Application"
-             x:Class="PMS_Application.MainPage">
+             x:Class="PMS_Application.MainPage"
+             BackgroundColor="Black">
 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome Pms Application1!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+            <Image Source="download2.png" HorizontalOptions="Center" Margin="5" Grid.Row="0"/>
+            <Label Text="IFOUR.PM" TextColor="White" FontAttributes="Bold" FontSize="30" HorizontalOptions="Center" Grid.Row="2"/>
 
+            <Entry Placeholder="Email" x:Name="username" Grid.Row="3" BackgroundColor="White" TextColor="Black" HorizontalOptions="Center" WidthRequest="350" HeightRequest="45"/>
+            
+            <Entry Placeholder="Password" x:Name="password" Grid.Row="4" BackgroundColor="White" TextColor="Black" IsPassword="True" HorizontalOptions="Center" HeightRequest="45" WidthRequest="350"/>
+
+            <Button Text="Login" Clicked="login_clicked" Grid.Row="5" BackgroundColor="#bf1e2d" TextColor="White" HorizontalOptions="Center" WidthRequest="350" HeightRequest="45"/>
+        
+        </StackLayout>
+    </Grid>
 </ContentPage>
