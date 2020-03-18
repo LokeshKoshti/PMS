@@ -13,5 +13,10 @@ namespace PMS_Application
         {
             InitializeComponent();
         }
+
+        private void login_clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
