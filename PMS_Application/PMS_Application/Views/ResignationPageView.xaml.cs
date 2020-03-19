@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace PMS_Application.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class LoginPageView : ContentPage
+	public partial class ResignationPageView : ContentPage
 	{
-		public LoginPageView ()
+		public ResignationPageView ()
 		{
-			InitializeComponent();
+			InitializeComponent ();
 		}
-
-        private void login_clicked(object sender, EventArgs e)
-        {
-            Navigation.PushModalAsync(new MasterPageView());
-        }
-    }
+	}
 }

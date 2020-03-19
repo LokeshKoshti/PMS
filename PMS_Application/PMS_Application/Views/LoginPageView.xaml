@@ -5,7 +5,7 @@
              BackgroundColor="Black">
     <ContentPage.Content>
         <StackLayout>
-            <Grid>
+            <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition Height="Auto"/>
@@ -21,7 +21,7 @@
                 </Frame>
                 <Label Text="IFOUR.PM" TextColor="White" FontAttributes="Bold" FontSize="30" HorizontalOptions="Center" Grid.Row="1"/>
 
-                <Entry Placeholder="Email" x:Name="username" Grid.Row="2" BackgroundColor="White" TextColor="Black" HorizontalOptions="Center" WidthRequest="350" />
+                <Entry Placeholder="Email" Keyboard="Email" x:Name="username" Grid.Row="2" BackgroundColor="White" TextColor="Black" HorizontalOptions="Center" WidthRequest="350" />
 
                 <Entry Placeholder="Password" x:Name="password" Grid.Row="3" BackgroundColor="White" Margin="10" TextColor="Black" IsPassword="True" HorizontalOptions="Center" WidthRequest="350"/>
 

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PMS_Application.Views.MasterPageView"
+                  Title="Welcome to Ifour.PM">
+
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Welcome to Ifour.PM">
+            <ContentPage.Resources>
+                <ResourceDictionary>
+                    <Style x:Key="ButtonStyle" TargetType="Button">
+                        <Setter Property="BackgroundColor" Value="#676a6c"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="TextColor" Value="White"/>
+                        <Setter Property="FontAttributes" Value="Bold"/>
+                        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                        <!--<Setter Property="VerticalOptions" Value="StartAndExpand"/>--><!--
+                        <Setter Property="WidthRequest" Value="{Binding Path=WidthRequest, Source={x:Reference test}}"/>-->
+                        <Style.Triggers>
+                            <Trigger Property="IsPressed" Value="True" TargetType="Button">
+                                <Setter Property="BackgroundColor" Value="#707070"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ResourceDictionary>
+            </ContentPage.Resources>
+            <ScrollView>
+            <StackLayout BackgroundColor="#676a6c" x:Name="test">
+                
+                <Label Text="Welcome to Ifour.PM" FontSize="25" TextColor="White" FontAttributes="Bold" Margin="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Button Style="{StaticResource ButtonStyle}" Text="Dashboard" />
+                <Button Style="{StaticResource ButtonStyle}" Text="Leave   " />
+                <Button Style="{StaticResource ButtonStyle}" Text="Timesheet"/>
+                <Button Style="{StaticResource ButtonStyle}" Text="Support Ticket" />
+                <Button Style="{StaticResource ButtonStyle}" Text="Trainees Details" />
+                <Button Style="{StaticResource ButtonStyle}" Text="Requirment" />
+                <Button Style="{StaticResource ButtonStyle}" Text="Event   " />
+                <Button Style="{StaticResource ButtonStyle}" Text="Request" />
+                <Button Style="{StaticResource ButtonStyle}" Text="Holiday" />
+                <Button Style="{StaticResource ButtonStyle}" Text="Resignation"/>
+                <Button Style="{StaticResource ButtonStyle}" Text="LogOut"  />
+
+            </StackLayout>
+            </ScrollView>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage></NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
