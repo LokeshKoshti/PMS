@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace PMS_Application
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace PMS_Application.Views
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class LoginPageView : ContentPage
+	{
+		public LoginPageView ()
+		{
+			InitializeComponent();
+		}
 
         private void login_clicked(object sender, EventArgs e)
         {
