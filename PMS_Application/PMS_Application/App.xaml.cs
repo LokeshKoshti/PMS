@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PMS_Application.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,7 @@ namespace PMS_Application
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new LoginPageView();
         }
 
         protected override void OnStart()

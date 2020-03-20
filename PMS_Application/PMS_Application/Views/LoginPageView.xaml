@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PMS_Application.Views.LoginPageView"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Frame CornerRadius="150" Margin="0" Grid.Row="0" Padding="0" BackgroundColor="White" HorizontalOptions="Center" IsClippedToBounds="True">
+                    <Image Source="PMS.png" Margin="0" HorizontalOptions="Center" VerticalOptions="Center" Aspect="AspectFill"/>
+                </Frame>
+                <Label Text="IFOUR.PM" TextColor="White" FontAttributes="Bold" FontSize="30" HorizontalOptions="Center" Grid.Row="1"/>
+
+                <Entry Placeholder="Email" Keyboard="Email" x:Name="username" Grid.Row="2" BackgroundColor="White" TextColor="Black" HorizontalOptions="Center" WidthRequest="350" />
+
+                <Entry Placeholder="Password" x:Name="password" Grid.Row="3" BackgroundColor="White" Margin="10" TextColor="Black" IsPassword="True" HorizontalOptions="Center" WidthRequest="350"/>
+
+                <Button Text="Login" Clicked="login_clicked" Grid.Row="4" BackgroundColor="#bf1e2d" Margin="10" TextColor="White" HorizontalOptions="Center" WidthRequest="350" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
