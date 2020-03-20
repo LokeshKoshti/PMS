@@ -15,7 +15,28 @@ namespace PMS_Application.Views
 		public MasterPageView ()
 		{
 			InitializeComponent ();
-            Detail = new NavigationPage(new DashboardPageView());
-		}
-	}
+            //Detail = new NavigationPage(new DashboardPageView());
+            var nav = new NavigationPage
+            {
+                Title = "Dashboard"
+            };
+            nav.PushAsync(new DashboardPageView() { Title = "Dashboard" });
+            nav.BarBackgroundColor = Color.FromHex("#bf1e2d");
+
+            Detail = nav;
+            IsPresented = false;
+        }
+
+        private void Leave_Onclicked(object sender, EventArgs e)
+        {
+            Detail.Navigation.PushAsync(new LeavePageView());
+            IsPresented = false;
+        }
+
+        private void LogOut_OnCLick(object sender, EventArgs e)
+        {
+            App.Current.MainPage= new LoginPageView();
+          
+        }
+    }
 }

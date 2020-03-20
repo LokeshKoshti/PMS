@@ -2,7 +2,8 @@
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PMS_Application.Views.MasterPageView"
-                  Title="Welcome to Ifour.PM">
+             Title="Welcome to iFour.PM"
+                  BackgroundColor="Aqua">
 
 
     <MasterDetailPage.Master>
@@ -30,7 +31,7 @@
                 
                 <Label Text="Welcome to Ifour.PM" FontSize="25" TextColor="White" FontAttributes="Bold" Margin="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                 <Button Style="{StaticResource ButtonStyle}" Text="Dashboard" />
-                <Button Style="{StaticResource ButtonStyle}" Text="Leave   " />
+                <Button Style="{StaticResource ButtonStyle}" Text="Leave   " Clicked="Leave_Onclicked"/>
                 <Button Style="{StaticResource ButtonStyle}" Text="Timesheet"/>
                 <Button Style="{StaticResource ButtonStyle}" Text="Support Ticket" />
                 <Button Style="{StaticResource ButtonStyle}" Text="Trainees Details" />
@@ -39,13 +40,13 @@
                 <Button Style="{StaticResource ButtonStyle}" Text="Request" />
                 <Button Style="{StaticResource ButtonStyle}" Text="Holiday" />
                 <Button Style="{StaticResource ButtonStyle}" Text="Resignation"/>
-                <Button Style="{StaticResource ButtonStyle}" Text="LogOut"  />
+                <Button Style="{StaticResource ButtonStyle}" Text="LogOut" Clicked="LogOut_OnCLick" />
 
             </StackLayout>
             </ScrollView>
         </ContentPage>
     </MasterDetailPage.Master>
     <MasterDetailPage.Detail>
-        <NavigationPage></NavigationPage>
+        <NavigationPage BarBackgroundColor="#bf1e2d"></NavigationPage>
     </MasterDetailPage.Detail>
 </MasterDetailPage>

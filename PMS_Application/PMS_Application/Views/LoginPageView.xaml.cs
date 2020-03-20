@@ -15,11 +15,11 @@ namespace PMS_Application.Views
 		public LoginPageView ()
 		{
 			InitializeComponent();
-		}
+        }
 
         private void login_clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new MasterPageView());
+         App.Current.MainPage = new MasterPageView();
         }
     }
 }

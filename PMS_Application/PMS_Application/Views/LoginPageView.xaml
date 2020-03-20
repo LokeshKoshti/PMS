@@ -4,8 +4,8 @@
              x:Class="PMS_Application.Views.LoginPageView"
              BackgroundColor="Black">
     <ContentPage.Content>
-        <StackLayout>
-            <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <ScrollView>
+            <Grid  VerticalOptions="CenterAndExpand" Margin="20,130,20,0" HorizontalOptions="CenterAndExpand">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition Height="Auto"/>
@@ -16,17 +16,19 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Frame CornerRadius="150" Margin="0" Grid.Row="0" Padding="0" BackgroundColor="White" HorizontalOptions="Center" IsClippedToBounds="True">
-                    <Image Source="PMS.png" Margin="0" HorizontalOptions="Center" VerticalOptions="Center" Aspect="AspectFill"/>
+                <Frame CornerRadius="100"  Margin="0" Grid.Row="0" Padding="0" BackgroundColor="White" HorizontalOptions="Center" IsClippedToBounds="True">
+                    <Image Source="PMS.png" Margin="0" HeightRequest="200" WidthRequest="200" Aspect="AspectFill"/>
                 </Frame>
-                <Label Text="IFOUR.PM" TextColor="White" FontAttributes="Bold" FontSize="30" HorizontalOptions="Center" Grid.Row="1"/>
+      
+            <Label Text="IFOUR.PM" TextColor="White" FontAttributes="Bold" FontSize="30" HorizontalOptions="Center" Grid.Row="1"/>
+                <StackLayout Grid.Row="2">
+                <Entry Placeholder="Enter Email" Margin="0,5,0,0" Keyboard="Email" x:Name="username" BackgroundColor="White" TextColor="Black" HorizontalTextAlignment="Start" WidthRequest="350" />
 
-                <Entry Placeholder="Email" Keyboard="Email" x:Name="username" Grid.Row="2" BackgroundColor="White" TextColor="Black" HorizontalOptions="Center" WidthRequest="350" />
+                <Entry Placeholder="Enter Password" Margin="0,8,0,0" x:Name="password" BackgroundColor="White" TextColor="Black" IsPassword="True" HorizontalTextAlignment="Start" WidthRequest="350"/>
 
-                <Entry Placeholder="Password" x:Name="password" Grid.Row="3" BackgroundColor="White" Margin="10" TextColor="Black" IsPassword="True" HorizontalOptions="Center" WidthRequest="350"/>
-
-                <Button Text="Login" Clicked="login_clicked" Grid.Row="4" BackgroundColor="#bf1e2d" Margin="10" TextColor="White" HorizontalOptions="Center" WidthRequest="350" />
+                <Button Text="Login" Clicked="login_clicked" Margin="0,10,0,0" BackgroundColor="#bf1e2d" TextColor="White" HorizontalOptions="Center" WidthRequest="350" FontSize="16" />
+                </StackLayout>
             </Grid>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
