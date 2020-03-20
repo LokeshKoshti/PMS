@@ -15,7 +15,7 @@
                         <Setter Property="FontSize" Value="20"/>
                         <Setter Property="TextColor" Value="White"/>
                         <Setter Property="FontAttributes" Value="Bold"/>
-                        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                        <Setter Property="HorizontalOptions" Value="Start"/>
                         <!--<Setter Property="VerticalOptions" Value="StartAndExpand"/>--><!--
                         <Setter Property="WidthRequest" Value="{Binding Path=WidthRequest, Source={x:Reference test}}"/>-->
                         <Style.Triggers>
